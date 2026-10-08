@@ -237,18 +237,17 @@ h1.hot:hover{text-shadow:0 4px 18px rgba(181,18,27,.25)}
 .btn.sec:hover{background:#F3F3F5}
 .tools small{font-size:13.5px;font-weight:600;color:#fff;background:rgba(37,40,46,.7);padding:5px 12px;border-radius:20px}
 
-/* ---- drawer (di luar stage, ukuran asli) ---- */
-#ov{position:fixed;inset:0;background:rgba(20,22,26,.55);opacity:0;pointer-events:none;transition:opacity .25s;z-index:50}
-#dr{position:fixed;top:0;right:0;bottom:0;width:min(780px,100vw);background:#fff;z-index:60;transform:translateX(102%);transition:transform .3s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;box-shadow:-20px 0 60px rgba(0,0,0,.3);font-family:var(--sans);color:var(--ink)}
-body.open #ov{opacity:1;pointer-events:auto}
-body.open ~ #dr,html.open #dr{transform:none}
+/* ---- modal di tengah (di luar stage, ukuran asli) ---- */
+#ov{position:fixed;inset:0;background:rgba(20,22,26,.6);opacity:0;pointer-events:none;transition:opacity .25s;z-index:50}
+#dr{position:fixed;top:50%;left:50%;width:min(860px,calc(100vw - 32px));max-height:min(88vh,920px);background:#fff;z-index:60;border-radius:18px;overflow:hidden;transform:translate(-50%,-50%) scale(.94);opacity:0;pointer-events:none;transition:transform .28s cubic-bezier(.2,.8,.2,1),opacity .22s;display:flex;flex-direction:column;box-shadow:0 30px 80px rgba(0,0,0,.4);font-family:var(--sans);color:var(--ink)}
+html.open #dr{transform:translate(-50%,-50%) scale(1);opacity:1;pointer-events:auto}
 html.open #ov{opacity:1;pointer-events:auto}
 #dr .top{background:linear-gradient(135deg,var(--red),var(--crimson));color:#fff;padding:26px 36px 24px;position:relative}
 #dr .kk{font-size:13px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;opacity:.9;padding-right:50px}
 #dr h2{font-family:var(--serif);font-size:36px;line-height:1.15;margin-top:8px;font-weight:800}
 #dr .x{position:absolute;right:22px;top:20px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.2);color:#fff;font-size:22px;cursor:pointer}
 #dr .x:hover{background:rgba(255,255,255,.35)}
-#dr .bd{flex:1;overflow:auto;padding:26px 36px 30px;font-size:19px;line-height:1.55}
+#dr .bd{flex:1;min-height:0;overflow:auto;padding:26px 36px 30px;font-size:19px;line-height:1.55}
 #dr .bd h3{font-size:14px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--red);margin:22px 0 8px;display:flex;align-items:center;gap:9px}
 #dr .bd h3:first-child{margin-top:0}
 #dr .bd h3:before{content:"";width:5px;height:16px;background:var(--red);border-radius:2px}
