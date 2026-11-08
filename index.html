@@ -41,21 +41,21 @@ h1{font-family:var(--serif);font-weight:800;font-size:80px;line-height:1.02;colo
 .h:before{content:"";width:5px;height:21px;background:var(--red);border-radius:2px}
 
 /* ---------- ROW A ---------- */
-.rowA{top:338px;height:266px;display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:266px;gap:24px}
-.rowA .card{padding:20px 26px}
-.shift{display:grid;grid-template-columns:1fr 46px 1fr;gap:6px;margin-top:14px}
-.box{border-radius:12px;padding:14px 16px;font-size:16.5px;line-height:1.38;color:var(--mute);background:#F1F2F4}
-.box b{display:block;font-size:21px;color:var(--ink);margin-bottom:6px;font-weight:800}
+.rowA{top:328px;height:276px;display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:276px;gap:24px}
+.rowA .card{padding:20px 26px;display:flex;flex-direction:column}
+.shift{display:grid;grid-template-columns:1fr 44px 1fr;gap:8px;margin-top:12px;flex:1;align-items:stretch}
+.box{border-radius:12px;padding:13px 16px;font-size:15.5px;line-height:1.36;color:var(--mute);background:#F1F2F4;display:flex;flex-direction:column;justify-content:center}
+.box b{display:block;font-size:19.5px;color:var(--ink);margin-bottom:5px;font-weight:800}
 .box.to{background:linear-gradient(135deg,var(--red),var(--crimson));color:#fff}.box.to b{color:#fff}
 .arr{display:flex;align-items:center;justify-content:center}
-.arr span{width:40px;height:40px;border-radius:50%;background:#fff;border:2px solid var(--red);color:var(--red);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px}
-.note{margin-top:10px;font-size:15.5px;color:var(--mute);font-style:italic}
-.stat{display:flex;align-items:center;gap:16px;margin-top:10px}
-.stat .n{font-family:var(--serif);font-weight:800;font-size:66px;line-height:.95;color:var(--crimson)}
-.stat .t{font-size:16.5px;line-height:1.3;font-weight:600}
-ul{list-style:none;margin-top:10px}
-ul li{font-size:16.5px;line-height:1.32;padding-left:22px;position:relative;margin-bottom:6px}
-ul li:before{content:"";position:absolute;left:2px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--red)}
+.arr span{width:38px;height:38px;border-radius:50%;background:#fff;border:2px solid var(--red);color:var(--red);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:19px}
+.note{margin-top:10px;font-size:14.5px;color:var(--mute);font-style:italic}
+.stat{display:flex;align-items:center;gap:14px;margin-top:12px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.stat .n{font-family:var(--serif);font-weight:800;font-size:54px;line-height:.95;color:var(--crimson);flex-shrink:0}
+.stat .t{font-size:15.5px;line-height:1.32;font-weight:600;color:var(--ink)}
+ul{list-style:none;margin-top:12px;display:flex;flex-direction:column;gap:8px}
+ul li{font-size:15.5px;line-height:1.34;padding-left:20px;position:relative;margin-bottom:0}
+ul li:before{content:"";position:absolute;left:2px;top:6px;width:8px;height:8px;border-radius:50%;background:var(--red)}
 .q .old{color:#9A9EA6;text-decoration:line-through;text-decoration-color:var(--red);font-size:20px;font-weight:600;margin-top:14px}
 .q .lbl{font-size:13.5px;letter-spacing:2.5px;font-weight:800;color:var(--red);margin-top:12px}
 .q .new{font-family:var(--serif);font-size:28px;font-weight:700;line-height:1.25;margin-top:6px;color:var(--ink)}
@@ -150,63 +150,78 @@ ul li:before{content:"";position:absolute;left:2px;top:7px;width:9px;height:9px;
 
 <script>
 const D={
-  "bulan": "SEPTEMBER 2026",
-  "tema": "Customer-Centric",
-  "tagline": "Dari fokus “Produk” menjadi fokus “Solusi” bagi pelanggan",
+  "bulan": "OKTOBER 2026",
+  "tema": "Performance-Driven Culture",
+  "tagline": "Membangun perilaku kerja yang berorientasi pada hasil, akuntabilitas, dan penciptaan dampak nyata bagi SIG",
   "durasi": "10–15 Menit",
   "format": "Briefing Tim oleh Change Leader",
   "shift": {
-    "dari": { "label": "Product-Centric", "desc": "Berangkat dari apa yang kita miliki, apa yang kita produksi, dan bagaimana produk dapat terjual." },
-    "ke": { "label": "Customer-Centric", "desc": "Berangkat dari kebutuhan pelanggan, masalah yang ingin diselesaikan, dan value yang kita ciptakan." },
-    "catatan": "Kualitas produk tetap menjadi fondasi."
+    "dari": {
+      "label": "Activity-Oriented",
+      "desc": "Berfokus pada pelaksanaan aktivitas dan penyelesaian tugas tanpa melihat dampaknya bagi perusahaan."
+    },
+    "ke": {
+      "label": "Outcome-Oriented",
+      "desc": "Berfokus pada pencapaian KPI terukur dan penyelesaian kerja hingga tuntas demi nilai tambah bagi SIG."
+    },
+    "catatan": "Kinerja diukur dari besarnya hasil dan dampak nyata yang diciptakan."
   },
   "konteks": {
-    "judul": "Konteks Bisnis",
-    "angka": "2×",
-    "angka_ket": "kapasitas supply industri semen dibanding total demand (oversupply)",
+    "judul": "Why Does It Matter?",
+    "angka": "100%",
+    "angka_ket": "sumber daya & aktivitas diarahkan pada kontribusi nyata bagi target bisnis",
     "poin": [
-      "Pelanggan punya semakin banyak pilihan produk",
-      "Persaingan bukan hanya harga: kualitas, kemudahan layanan & solusi",
-      "Kebutuhan tiap segmen berbeda dan terus berkembang"
+      "Persaingan industri semen makin ketat & oversupply",
+      "Tuntutan produktivitas & efisiensi di seluruh lini",
+      "Kinerja diukur dari besarnya hasil & dampak nyata"
     ]
   },
   "pertanyaan": {
-    "judul": "Apa Artinya bagi SIG?",
-    "dulu": "Apa yang bisa kita jual?",
-    "kini": "Apa yang dibutuhkan pelanggan dan nilai apa yang bisa SIG ciptakan untuk mereka?"
+    "judul": "From Activity to Impact",
+    "dulu": "Apa yang sudah saya kerjakan?",
+    "kini": "Hasil dan dampak apa yang saya ciptakan bagi pelanggan dan perusahaan?"
   },
-  "fokus_judul": "Fokus Perubahan",
+  "fokus_judul": "How to Implement",
   "fokus": [
-    "Understand the Need",
-    "Turn Needs into Solutions",
-    "Create Value",
-    "Respond & Improve",
-    "Collaborate Across Functions",
-    "Simplify the Customer Journey",
-    "Focus on Shared Outcomes"
+    "Set Clear Priorities",
+    "Own the Outcome",
+    "Execute with Discipline",
+    "Collaborate for Results",
+    "Improve & Raise the Bar"
   ],
   "cta_judul": "Call to Action",
   "cta": [
-    { "judul": "Start with the Customer", "desc": "Sebelum bekerja atau mengambil keputusan, tanyakan: siapa yang menerima manfaat dan apa yang benar-benar mereka butuhkan?" },
-    { "judul": "Turn Needs into Solutions", "desc": "Ubah kebutuhan dan pain point menjadi solusi yang konkret, sederhana, dan dapat dijalankan." },
-    { "judul": "Create Value Together", "desc": "Bangun kolaborasi dan fokus pada hasil akhir bagi pelanggan, bukan hanya target masing-masing unit." }
+    {
+      "judul": "Set Clear Priorities",
+      "desc": "Pahami target utama dan indikator keberhasilan, lalu fokuskan waktu, energi, serta sumber daya pada pekerjaan yang paling berdampak."
+    },
+    {
+      "judul": "Own & Execute with Discipline",
+      "desc": "Ambil tanggung jawab penuh atas hasil kerja dan jalankan secara konsisten, tepat waktu, berkualitas, serta efisien hingga tuntas."
+    },
+    {
+      "judul": "Collaborate & Raise the Bar",
+      "desc": "Bangun kolaborasi lintas fungsi untuk menyelesaikan hambatan bersama, serta terus evaluasi hasil agar bekerja lebih cepat dan berdampak."
+    }
   ],
   "refleksi_judul": "Team Reflection",
   "refleksi": [
-    "Siapa “customer” dari pekerjaan tim kita, eksternal maupun internal?",
-    "Apa satu pain point mereka yang paling sering kita temui?",
-    "Apa satu hal sederhana yang bisa kita ubah bulan ini agar lebih mudah, cepat, atau bernilai bagi customer?"
+    "Apa satu tindakan konkret minggu ini untuk mempercepat pencapaian target tim?",
+    "Apa tindakan konkret yang dapat kita lakukan untuk mengatasi hambatan yang ada?",
+    "Bagaimana kita dapat meningkatkan kualitas hasil kerja agar berdampak lebih besar bagi SIG?"
   ],
-  "pesan": "Customer-centric adalah cara kerja bersama di seluruh rantai nilai SIG. Transformasi budaya dimulai dari perubahan kecil dalam cara kita bekerja setiap hari."
-}
-;
+  "pesan": "Kinerja bukan sekadar tentang seberapa banyak pekerjaan yang dilakukan, tetapi seberapa besar hasil dan dampak nyata yang dihasilkan bagi pelanggan dan perusahaan."
+};
 const $=i=>document.getElementById(i), T=(i,v)=>$(i).textContent=v||'';
-T('tema',D.tema);T('tagline',D.tagline);T('bulan',D.bulan);T('durasi',D.durasi);T('format',D.format);
+T('tema',D.tema);if(D.tema.length>20)$('tema').style.fontSize='62px';
+T('tagline',D.tagline);if(D.tagline.length>75)$('tagline').style.fontSize='22px';
+T('bulan',D.bulan);T('durasi',D.durasi);T('format',D.format);
 T('dari',D.shift.dari.label);T('dariD',D.shift.dari.desc);T('ke',D.shift.ke.label);T('keD',D.shift.ke.desc);T('catatan',D.shift.catatan);
 T('kj',D.konteks.judul);T('angka',D.konteks.angka);T('angkaK',D.konteks.angka_ket);
 $('poin').innerHTML=D.konteks.poin.map(p=>`<li>${p}</li>`).join('');
 T('pj',D.pertanyaan.judul);T('dulu',D.pertanyaan.dulu);T('kini',D.pertanyaan.kini);
 T('fj',D.fokus_judul);$('fsub').innerHTML=D.shift.dari.label+' →<br>'+D.shift.ke.label;
+$('track').style.gridTemplateColumns=`repeat(${D.fokus.length},1fr)`;
 $('track').innerHTML=D.fokus.map((f,i)=>`<div class="step"><i>${i+1}</i><span>${f}</span></div>`).join('');
 T('cj',D.cta_judul);
 $('ctas').innerHTML=D.cta.map((c,i)=>`<div class="card c"><div class="num">0${i+1}</div><b>${c.judul}</b><p>${c.desc}</p></div>`).join('');
@@ -228,13 +243,28 @@ body{position:absolute!important;left:50%;top:50%;margin:-540px 0 0 -960px;trans
 .foot.hot:hover{background:#343942}
 .hero-in .hot:hover{filter:brightness(1.12)}
 h1.hot:hover{text-shadow:0 4px 18px rgba(181,18,27,.25)}
-.tools{position:absolute;right:70px;top:30px;z-index:5;display:flex;flex-direction:column;align-items:flex-end;gap:8px}
-.tools .row{display:flex;gap:10px}
-.btn{font:800 15px/1 var(--sans);letter-spacing:1.5px;border:0;border-radius:30px;padding:13px 22px;cursor:pointer;transition:.15s}
+.tools{position:absolute;right:70px;top:30px;z-index:25;display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.tools .row{display:flex;gap:10px;align-items:center}
+.btn{font:800 15px/1 var(--sans);letter-spacing:1.5px;border:0;border-radius:30px;padding:13px 22px;cursor:pointer;transition:.15s;display:inline-flex;align-items:center;gap:8px}
 .btn.pri{background:var(--red);color:#fff;box-shadow:0 6px 18px rgba(236,28,36,.35)}
 .btn.pri:hover{background:var(--crimson)}
 .btn.sec{background:#fff;color:var(--ink);box-shadow:0 4px 14px rgba(0,0,0,.14)}
 .btn.sec:hover{background:#F3F3F5}
+.ed-wrap{position:relative}
+.btn.ed{background:#25282E;color:#fff;box-shadow:0 4px 14px rgba(0,0,0,.2);padding:13px 18px;letter-spacing:1.2px}
+.btn.ed:hover{background:#353942}
+.btn.ed svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.ed-menu{position:absolute;left:0;top:calc(100% + 8px);min-width:320px;background:#fff;border-radius:14px;box-shadow:0 16px 42px rgba(0,0,0,.28);border:1px solid #E4E6EB;padding:8px;display:none;flex-direction:column;gap:4px;z-index:40}
+.ed-wrap.open .ed-menu{display:flex}
+.ed-hdr{font-size:11.5px;font-weight:800;letter-spacing:2px;color:var(--mute);padding:6px 12px 4px;text-transform:uppercase}
+.ed-item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;border-radius:10px;text-decoration:none;color:var(--ink);transition:background .15s}
+.ed-item:hover{background:#F4F5F8}
+.ed-item.act{background:#FFF0F1;border:1px solid #F5C2C7}
+.ed-item b{display:block;font-size:14px;font-weight:800;color:var(--ink);letter-spacing:.8px}
+.ed-item.act b{color:var(--red)}
+.ed-item span{display:block;font-size:13px;color:var(--mute);font-weight:600;margin-top:2px}
+.ed-badge{font-size:11px;font-weight:800;letter-spacing:1px;padding:4px 9px;border-radius:20px;background:#EAECEF;color:var(--ink);white-space:nowrap}
+.ed-item.act .ed-badge{background:var(--red);color:#fff}
 .tools small{font-size:13.5px;font-weight:600;color:#fff;background:rgba(37,40,46,.7);padding:5px 12px;border-radius:20px}
 
 /* ---- modal di tengah (di luar stage, ukuran asli) ---- */
@@ -275,181 +305,175 @@ html.open #ov{opacity:1;pointer-events:auto}
 const DET={
   "tema": {
     "kicker": "Opening · Tujuan Briefing",
-    "judul": "Tema: Customer-Centric",
+    "judul": "Tema: Performance-Driven Culture",
     "blok": [
       { "h": "Durasi", "p": "10–15 menit." },
+      { "h": "Definisi Tema", "p": "Membangun perilaku kerja yang berorientasi pada hasil (outcome), akuntabilitas, dan penciptaan dampak nyata bagi SIG." },
       { "h": "Tujuan Briefing", "ul": [
-        "Mendorong perubahan pola pikir dari fokus “Produk” menjadi “Solusi”: membangun kesadaran tim untuk berhenti memikirkan target internal semata, dan mulai mengevaluasi pekerjaan dari kacamata pelanggan. Apakah proses yang kita jalankan hari ini memecahkan masalah pelanggan atau justru memperumit mereka?",
-        "Menghubungkan peran internal dengan dampak eksternal: membantu fungsi pendukung (supporting dan operasional) menyadari bahwa pekerjaan mereka memengaruhi pengalaman pelanggan. Tujuannya menumbuhkan shared ownership of outcomes, yaitu kepuasan pelanggan diakui sebagai tanggung jawab bersama, bukan hanya tugas tim sales atau marketing."
+        "Mendorong pergeseran pola pikir dari sekadar menyelesaikan aktivitas (Activity-Oriented) menjadi berorientasi pada hasil dan dampak nyata (Outcome-Oriented).",
+        "Memastikan setiap anggota tim memahami prioritas utama, memiliki akuntabilitas penuh atas pencapaian KPI, dan berkolaborasi lintas fungsi untuk mencapai target bisnis SIG."
       ]},
       { "h": "Pembukaan (Opening)", "ul": [
-        "Sapaan & apresiasi: ucapkan terima kasih atas komitmen seluruh Insan SIG dalam menjaga kinerja di tengah kondisi bisnis yang masih menantang.",
-        "Pengantar: pada Culture Pause Agustus, kita telah memahami bahwa transformasi bisnis SIG perlu didukung oleh perubahan cara berpikir dan cara bekerja. Bulan ini kita memperdalam satu pergeseran yang sangat relevan dengan kondisi bisnis kita: dari Product-Centric menuju Customer-Centric."
+        "Sapaan & apresiasi: ucapkan terima kasih atas dedikasi seluruh Insan SIG dalam menjaga kinerja di tengah tantangan industri.",
+        "Pengantar: setelah memperkuat orientasi Customer-Centric pada edisi sebelumnya, bulan ini kita menerjemahkan semangat tersebut ke dalam eksekusi nyata melalui Performance-Driven Culture — memastikan setiap aktivitas kerja menghasilkan dampak terukur bagi pelanggan dan perusahaan."
       ]}
     ]
   },
   "konteks": {
     "kicker": "The Business Context",
-    "judul": "Konteks Bisnis",
+    "judul": "Why Does It Matter?",
     "blok": [
-      { "h": "Kondisi Pasar", "p": "Industri semen saat ini menghadapi tantangan oversupply yang ekstrem, dengan kapasitas supply sudah mencapai dua kali lipat dari total demand. Di tengah realita pasar yang surplus dan persaingan yang ketat, keunggulan kompetitif tidak bisa lagi dibangun hanya dengan kemampuan memproduksi dan menjual semen saja." },
-      { "h": "Implikasi bagi SIG", "p": "Kita perlu semakin memahami apa yang benar-benar dibutuhkan pelanggan dan bagaimana SIG dapat menciptakan nilai yang lebih besar bagi mereka. Customer-Centric menjadi penting karena pelanggan memiliki semakin banyak pilihan dan akan menilai kita bukan hanya dari produk, tetapi juga dari kualitas solusi dan pengalaman yang mereka terima." },
-      { "h": "Apa yang berubah di market?", "ul": [
-        "Pelanggan memiliki semakin banyak pilihan produk.",
-        "Persaingan tidak hanya terjadi pada harga, tetapi juga pada kualitas, kemudahan layanan, dan solusi yang diberikan.",
-        "Kebutuhan setiap segmen pelanggan dapat berbeda dan terus berkembang."
+      { "h": "Tantangan Industri & Bisnis", "p": "Di tengah persaingan industri semen yang semakin ketat, kondisi oversupply, serta tuntutan peningkatan produktivitas dan efisiensi, SIG perlu memastikan setiap sumber daya dan aktivitas memberikan kontribusi nyata terhadap pencapaian target bisnis." },
+      { "h": "Makna Kinerja bagi SIG", "p": "Kinerja bukan sekadar tentang seberapa banyak pekerjaan yang dilakukan, tetapi seberapa besar hasil dan dampak yang dihasilkan bagi pelanggan dan perusahaan." },
+      { "h": "Tiga Tuntutan Utama", "ul": [
+        "Menghadapi persaingan pasar yang ketat dan kondisi oversupply dengan eksekusi yang tajam.",
+        "Meningkatkan produktivitas dan efisiensi penggunaan sumber daya di setiap unit kerja.",
+        "Memastikan setiap aktivitas kerja terhubung langsung dengan pencapaian KPI dan target bisnis."
       ]},
-      { "callout": "Memahami kebutuhan pelanggan menjadi bagian penting untuk mempertahankan dan menciptakan pertumbuhan bisnis." }
+      { "callout": "Setiap sumber daya, waktu, dan aktivitas harus memberikan kontribusi nyata terhadap pencapaian target bisnis SIG." }
     ]
   },
   "pertanyaan": {
-    "kicker": "The Business Context · Apa artinya bagi SIG?",
-    "judul": "Apa Artinya bagi SIG?",
+    "kicker": "Mindset Shift · From Activity to Impact",
+    "judul": "Pergeseran Cara Bertanya",
     "blok": [
-      { "h": "Mengubah pertanyaan kita", "ul": [
-        "Kita tidak cukup hanya bertanya: “Apa yang bisa kita jual?”",
-        "Kita perlu mulai bertanya: “Apa yang dibutuhkan pelanggan dan nilai apa yang bisa SIG ciptakan untuk pelanggan?”"
+      { "h": "Mengubah pertanyaan utama kita", "ul": [
+        "Bukan lagi sekadar bertanya: “Apa yang sudah saya kerjakan?” (Activity-Oriented)",
+        "Melainkan bertanya: “Hasil dan dampak apa yang saya ciptakan?” (Outcome-Oriented)"
       ]},
-      { "callout": "Perubahan pertanyaan sederhana ini menggeser fokus kita dari produk menuju kebutuhan pelanggan dan penciptaan value." },
-      { "h": "Customer-Centric bukan hanya tugas Sales & Marketing", "ul": [
-        "Setiap fungsi memiliki pelanggan, baik eksternal maupun internal.",
-        "Fungsi operasi berkontribusi melalui quality dan reliability; fungsi supply chain melalui ketersediaan dan ketepatan waktu; fungsi pendukung (business enablers) melalui proses yang efisien, sederhana, dan membantu mendorong bisnis."
-      ]},
-      { "callout": "Customer-centric adalah cara kerja bersama di seluruh rantai nilai SIG." },
-      { "h": "Customer-Centric juga memperkuat kolaborasi SIG", "ul": [
-        "Kebutuhan pelanggan sering kali tidak dapat dijawab oleh satu fungsi atau satu entitas saja.",
-        "Kolaborasi lintas fungsi dan lintas Anak Perusahaan diperlukan agar SIG dapat menghadirkan solusi yang lebih utuh."
-      ]},
-      { "callout": "Fokus pada kebutuhan pelanggan membantu kita bergerak dari kepentingan masing-masing unit menuju shared outcomes." }
+      { "callout": "Pergeseran pertanyaan ini mengubah fokus kita dari sekadar sibuk menjalankan rutinitas menuju penciptaan nilai tambah yang terukur." },
+      { "h": "Apa artinya bagi setiap fungsi?", "ul": [
+        "Setiap fungsi — baik komersial, operasional, maupun pendukung — diukur dari seberapa besar kontribusi output kerjanya terhadap hasil akhir perusahaan.",
+        "Menyelesaikan tugas administratif atau rutinitas belum cukup jika belum menjawab kebutuhan bisnis dan target KPI yang ditetapkan."
+      ]}
     ]
   },
   "shift": {
     "kicker": "Culture Shift",
-    "judul": "Product-Centric → Customer-Centric",
+    "judul": "From Activity-Oriented → Outcome-Oriented",
     "blok": [
-      { "h": "Dua cara memulai", "ul": [
-        "Product-Centric berangkat dari apa yang kita miliki, apa yang kita produksi, dan bagaimana produk tersebut dapat terjual.",
-        "Customer-Centric berangkat dari kebutuhan pelanggan, masalah yang ingin mereka selesaikan, dan value yang dapat kita ciptakan melalui produk, layanan, maupun solusi SIG."
+      { "h": "Perbandingan Perilaku Kerja", "ul": [
+        "FROM — Activity-Oriented: “Apa yang sudah saya kerjakan?” Hanya berfokus pada pelaksanaan aktivitas dan penyelesaian tugas tanpa melihat dampaknya terhadap tujuan perusahaan.",
+        "TO — Outcome-Oriented: “Hasil dan dampak apa yang saya ciptakan?” Berfokus pada pencapaian KPI yang terukur dengan menyelesaikan pekerjaan hingga tuntas untuk memberikan nilai tambah bagi bisnis SIG secara keseluruhan."
       ]},
-      { "callout": "Pergeseran ini bukan berarti produk tidak penting. Justru kualitas produk tetap menjadi fondasi." },
-      { "p": "Keunggulan bisnis ditentukan oleh kemampuan kita menghubungkan produk, layanan, proses, dan kapabilitas SIG dengan kebutuhan pelanggan secara lebih tepat." },
-      { "h": "Terlihat dari kerja sehari-hari", "p": "Customer-Centric tidak hanya terlihat melalui program besar, tetapi dari kebiasaan untuk memahami kebutuhan, merespons dengan cepat, dan memastikan pekerjaan kita memberikan value kepada pihak yang menerima hasilnya." }
+      { "callout": "Menyelesaikan pekerjaan hingga tuntas berarti memastikan hasilnya benar-benar berdampak pada pencapaian target tim dan perusahaan." },
+      { "h": "Terlihat dalam keseharian", "p": "Budaya berorientasi kinerja tampak ketika setiap insan SIG memiliki kejelasan prioritas, mengambil kepemilikan penuh atas hasil akhir, disiplin dalam eksekusi, dan proaktif mencari solusi saat menemui hambatan." }
     ]
   },
   "fokus": [
     {
-      "kicker": "Fokus 1 dari 7 · Bagaimana Menerapkan",
-      "judul": "Understand the Need",
+      "kicker": "Langkah 1 dari 5 · How to Implement",
+      "judul": "1) Set Clear Priorities",
       "blok": [
-        { "p": "Memahami kebutuhan sebelum menawarkan solusi atau mengambil keputusan." },
+        { "p": "Pahami target utama, indikator keberhasilan, dan fokuskan waktu, energi, serta sumber daya pada pekerjaan yang paling berdampak." },
         { "h": "Dalam praktik", "ul": [
-          "Sebelum memulai pekerjaan atau mengambil keputusan, biasakan bertanya: siapa yang menerima manfaat dari pekerjaan kita dan apa yang benar-benar mereka butuhkan?",
-          "Mulai dengan mengidentifikasi siapa customer utama dari output tim, lalu tanyakan pain point yang paling sering mereka alami."
+          "Pastikan seluruh anggota tim memahami KPI dan target prioritas unit kerja.",
+          "Bedakan antara pekerjaan yang sekadar mendesak (rutinitas) dengan pekerjaan yang memberikan dampak terbesar pada target bisnis."
         ]},
-        { "callout": "Customer-Centric berangkat dari kebutuhan pelanggan, bukan dari apa yang kita miliki." }
+        { "callout": "Fokuskan waktu, energi, dan sumber daya pada pekerjaan yang paling berdampak." }
       ]
     },
     {
-      "kicker": "Fokus 2 dari 7 · Bagaimana Menerapkan",
-      "judul": "Turn Needs into Solutions",
+      "kicker": "Langkah 2 dari 5 · How to Implement",
+      "judul": "2) Own the Outcome",
       "blok": [
-        { "p": "Jangan berhenti pada identifikasi masalah, namun dorong tim untuk mengubah kebutuhan dan pain point menjadi solusi yang konkret, sederhana, dan dapat dijalankan." },
-        { "h": "Perlu diingat", "p": "Customer-Centric bukan berarti selalu mengatakan “ya”. Kita perlu memahami kebutuhan yang sebenarnya, mempertimbangkan aspek bisnis, risiko, tata kelola, dan kemampuan perusahaan, lalu menawarkan solusi yang paling tepat dan berkelanjutan." }
-      ]
-    },
-    {
-      "kicker": "Fokus 3 dari 7 · Bagaimana Menerapkan",
-      "judul": "Create Value",
-      "blok": [
-        { "p": "Tidak berhenti pada “pekerjaan saya sudah selesai”, tetapi memastikan output kita benar-benar membantu pihak yang membutuhkannya." },
-        { "callout": "Customer-Centric berarti memahami kebutuhan yang sebenarnya, menyeimbangkannya dengan kepentingan perusahaan, lalu memberikan solusi yang paling tepat dan bernilai." }
-      ]
-    },
-    {
-      "kicker": "Fokus 4 dari 7 · Bagaimana Menerapkan",
-      "judul": "Respond & Improve",
-      "blok": [
+        { "p": "Ambil tanggung jawab penuh atas target dan hasil kerja. Jangan berhenti hanya pada penyelesaian tugas." },
         { "h": "Dalam praktik", "ul": [
-          "Merespons kebutuhan dan kendala dengan cepat, jelas, dan solutif.",
-          "Menggunakan feedback pelanggan sebagai masukan untuk terus memperbaiki cara kerja."
-        ]}
+          "Kawal pekerjaan hingga benar-benar menghasilkan outcome yang diharapkan, bukan sekadar menggugurkan kewajiban.",
+          "Ketika muncul kendala di tengah jalan, ambil inisiatif untuk mencari jalan keluar, bukan menunggu atau melempar tanggung jawab."
+        ]},
+        { "callout": "Akuntabilitas berarti memiliki hasil akhir, bukan sekadar melaporkan aktivitas." }
       ]
     },
     {
-      "kicker": "Fokus 5 dari 7 · Bagaimana Menerapkan",
-      "judul": "Collaborate Across Functions",
+      "kicker": "Langkah 3 dari 5 · How to Implement",
+      "judul": "3) Execute with Discipline",
       "blok": [
-        { "p": "Berkolaborasi lintas fungsi ketika kebutuhan pelanggan tidak dapat diselesaikan sendiri." },
-        { "ul": [
-          "Kebutuhan pelanggan sering kali tidak dapat dijawab oleh satu fungsi atau satu entitas saja.",
-          "Kolaborasi lintas fungsi dan lintas Anak Perusahaan diperlukan agar SIG dapat menghadirkan solusi yang lebih utuh."
-        ]}
+        { "p": "Jalankan pekerjaan secara konsisten, tepat waktu, berkualitas, dan efisien sesuai prioritas bisnis." },
+        { "h": "Dalam praktik", "ul": [
+          "Jaga standar kualitas dan ketepatan waktu dalam setiap tahapan eksekusi.",
+          "Gunakan sumber daya secara efisien dan pantau progres pencapaian target secara berkala."
+        ]},
+        { "callout": "Rencana yang baik hanya akan menjadi dampak nyata melalui disiplin eksekusi yang konsisten." }
       ]
     },
     {
-      "kicker": "Fokus 6 dari 7 · Bagaimana Menerapkan",
-      "judul": "Simplify the Customer Journey",
+      "kicker": "Langkah 4 dari 5 · How to Implement",
+      "judul": "4) Collaborate for Results",
       "blok": [
-        { "p": "Menyederhanakan proses yang tidak memberi nilai tambah bagi pelanggan, baik internal maupun eksternal." },
-        { "callout": "Fungsi pendukung (business enablers) berkontribusi melalui proses yang efisien, sederhana, dan membantu mendorong bisnis." }
+        { "p": "Bangun kolaborasi lintas fungsi untuk menyelesaikan hambatan dan memastikan tercapainya hasil bersama." },
+        { "h": "Dalam praktik", "ul": [
+          "Hilangkan sekat antar-unit (silo) ketika menyelesaikan bottleneck yang menghambat target perusahaan.",
+          "Selaraskan langkah antar-fungsi agar proses kerja lebih cepat dan berorientasi pada shared outcomes."
+        ]},
+        { "callout": "Kolaborasi yang efektif berfokus pada penyelesaian hambatan dan pencapaian hasil bersama." }
       ]
     },
     {
-      "kicker": "Fokus 7 dari 7 · Bagaimana Menerapkan",
-      "judul": "Focus on Shared Outcomes",
+      "kicker": "Langkah 5 dari 5 · How to Implement",
+      "judul": "5) Improve & Raise the Bar",
       "blok": [
-        { "p": "Kepuasan pelanggan diakui sebagai tanggung jawab bersama (shared ownership of outcomes), bukan hanya tugas tim sales atau marketing." },
-        { "callout": "Fokus pada kebutuhan pelanggan membantu kita bergerak dari kepentingan masing-masing unit menuju shared outcomes." }
+        { "p": "Terus evaluasi hasil dan cari cara untuk bekerja lebih cepat, lebih baik, lebih efisien, dan lebih berdampak." },
+        { "h": "Dalam praktik", "ul": [
+          "Jangan cepat puas dengan cara kerja lama; lakukan evaluasi rutin atas apa yang sudah berjalan baik dan apa yang perlu diperbaiki.",
+          "Dorong inovasi dan perbaikan berkelanjutan (continuous improvement) untuk meningkatkan standar kinerja tim."
+        ]},
+        { "callout": "Evaluasi hasil secara berkelanjutan untuk bekerja lebih cepat, lebih baik, lebih efisien, dan lebih berdampak." }
       ]
     }
   ],
   "cta": [
     {
       "kicker": "Call to Action 1 dari 3",
-      "judul": "Start with the Customer",
+      "judul": "Set Clear Priorities",
       "blok": [
-        { "p": "Sebelum memulai pekerjaan atau mengambil keputusan, biasakan bertanya siapa yang menerima manfaat dari pekerjaan kita dan apa yang benar-benar mereka butuhkan." }
+        { "p": "Pahami target utama dan indikator keberhasilan tim, lalu fokuskan waktu, energi, serta sumber daya pada pekerjaan yang paling berdampak bagi bisnis SIG." }
       ]
     },
     {
       "kicker": "Call to Action 2 dari 3",
-      "judul": "Turn Needs into Solutions",
+      "judul": "Own & Execute with Discipline",
       "blok": [
-        { "p": "Jangan berhenti pada identifikasi masalah, namun dorong tim untuk mengubah kebutuhan dan pain point menjadi solusi yang konkret, sederhana, dan dapat dijalankan." }
+        { "p": "Ambil tanggung jawab penuh atas target dan hasil kerja. Jalankan pekerjaan secara konsisten, tepat waktu, berkualitas, dan efisien hingga tuntas." }
       ]
     },
     {
       "kicker": "Call to Action 3 dari 3",
-      "judul": "Create Value Together",
+      "judul": "Collaborate & Raise the Bar",
       "blok": [
-        { "p": "Ketika solusi membutuhkan fungsi lain, bangun kolaborasi dan fokus pada hasil akhir bagi pelanggan, bukan hanya penyelesaian target masing-masing unit." },
-        { "callout": "Transformasi budaya dimulai dari perubahan kecil dalam cara kita bekerja setiap hari." }
+        { "p": "Bangun kolaborasi lintas fungsi untuk menyelesaikan hambatan bersama, serta terus evaluasi hasil untuk bekerja lebih cepat, lebih efisien, dan lebih berdampak." }
       ]
     }
   ],
   "refleksi": {
-    "kicker": "Team Reflection · Diskusi singkat",
+    "kicker": "Team Reflection · Diskusi Singkat",
     "judul": "Team Reflection",
     "blok": [
-      { "h": "Pertanyaan diskusi", "ol": [
-        "Siapa “customer” dari pekerjaan tim kita, baik eksternal maupun internal?",
-        "Apa satu kebutuhan atau pain point mereka yang paling sering kita temui saat ini?",
-        "Apa satu hal sederhana yang dapat kita ubah bulan ini agar pekerjaan atau layanan kita menjadi lebih mudah, cepat, atau bernilai bagi customer kita?"
-      ]},
-      { "callout": "Contoh paling sederhana untuk memulai: identifikasi customer utama dari output tim, tanyakan pain point yang paling sering mereka alami, lalu sepakati satu perbaikan kecil yang dapat dilakukan dalam bulan ini. Fokus pada perubahan yang membuat proses lebih mudah, cepat, jelas, atau bernilai." }
+      { "h": "Pertanyaan Utama Refleksi Tim", "callout": "Apa satu tindakan konkret yang dapat kita lakukan minggu ini untuk mempercepat pencapaian target, mengatasi hambatan, atau meningkatkan kualitas hasil kerja tim?" },
+      { "h": "Panduan Diskusi bersama Tim", "ol": [
+        "Target mana yang saat ini paling membutuhkan percepatan di tim kita, dan apa prioritas utama minggu ini?",
+        "Hambatan apa yang paling menghalangi pencapaian hasil tersebut, dan dengan fungsi mana kita perlu berkolaborasi?",
+        "Satu tindakan konkret apa yang kita sepakati untuk dijalankan minggu ini agar hasil kerja lebih cepat, efisien, dan berdampak?"
+      ]}
     ]
   },
   "faq": {
-    "kicker": "FAQ untuk Leader",
-    "judul": "Pertanyaan yang Mungkin Muncul",
+    "kicker": "Panduan Change Leader",
+    "judul": "FAQ untuk Leader",
     "blok": [
       { "qa": [
-        { "q": "Apakah Customer-Centric hanya relevan untuk fungsi yang berhubungan langsung dengan pelanggan eksternal?",
-          "a": "Tidak. Setiap fungsi memiliki customer. Bagi fungsi komersial, customer dapat berupa pelanggan eksternal. Bagi fungsi pendukung maupun operasi, customer juga dapat berupa unit kerja atau fungsi lain yang menerima output pekerjaan kita. Prinsipnya sama, yaitu memahami kebutuhan dan memastikan pekerjaan kita menciptakan value." },
-        { "q": "Apakah Customer-Centric berarti kita harus selalu memenuhi semua permintaan pelanggan?",
-          "a": "Tidak. Customer-Centric bukan berarti selalu mengatakan “ya”. Kita perlu memahami kebutuhan yang sebenarnya, mempertimbangkan aspek bisnis, risiko, tata kelola, dan kemampuan perusahaan, lalu menawarkan solusi yang paling tepat dan berkelanjutan." },
-        { "q": "Apa contoh paling sederhana untuk mulai menerapkan Customer-Centric di tim?",
-          "a": "Mulai dengan mengidentifikasi siapa customer utama dari output tim, tanyakan pain point yang paling sering mereka alami, lalu sepakati satu perbaikan kecil yang dapat dilakukan dalam bulan ini. Fokus pada perubahan yang membuat proses lebih mudah, cepat, jelas, atau bernilai." }
+        {
+          "q": "Apa perbedaan utama antara Activity-Oriented dan Outcome-Oriented dalam pekerjaan sehari-hari?",
+          "a": "Activity-Oriented hanya berfokus pada daftar tugas yang dikerjakan (“saya sudah rapat, sudah membuat laporan”). Outcome-Oriented berfokus pada dampak dari pekerjaan tersebut terhadap target/KPI (“laporan dan tindak lanjut ini berhasil menurunkan waktu proses atau meningkatkan pencapaian target”)."
+        },
+        {
+          "q": "Apakah Performance-Driven Culture berarti kita hanya mengejar angka tanpa memperhatikan proses?",
+          "a": "Tidak. Proses yang disiplin, patuh tata kelola, dan kolaboratif tetap menjadi fondasi. Namun setiap proses harus diarahkan secara efisien untuk menghasilkan outcome nyata dan nilai tambah bagi pelanggan serta perusahaan."
+        },
+        {
+          "q": "Bagaimana cara paling praktis bagi Leader untuk memulai budaya ini di tim?",
+          "a": "Mulai dengan memperjelas prioritas dan indikator keberhasilan (KPI) tim, menggeser pertanyaan evaluasi dari “apa yang sudah dikerjakan” menjadi “dampak apa yang dihasilkan”, serta menyepakati satu tindakan konkret setiap minggu untuk mengatasi hambatan."
+        }
       ]}
     ]
   },
@@ -457,13 +481,14 @@ const DET={
     "kicker": "Pesan Kunci",
     "judul": "Pesan Kunci Bulan Ini",
     "blok": [
-      { "callout": "Customer-centric adalah cara kerja bersama di seluruh rantai nilai SIG." },
-      { "p": "Customer-Centric berarti memahami kebutuhan yang sebenarnya, menyeimbangkannya dengan kepentingan perusahaan, lalu memberikan solusi yang paling tepat dan bernilai." },
-      { "p": "Transformasi budaya dimulai dari perubahan kecil dalam cara kita bekerja setiap hari." }
+      { "callout": "Kinerja bukan sekadar tentang seberapa banyak pekerjaan yang dilakukan, tetapi seberapa besar hasil dan dampak yang dihasilkan bagi pelanggan dan perusahaan." },
+      { "p": "Mari bergerak dari Activity-Oriented menuju Outcome-Oriented melalui prioritas yang jelas, akuntabilitas penuh, disiplin eksekusi, kolaborasi lintas fungsi, dan perbaikan berkelanjutan." }
     ]
   }
 }
+
 ;
+const EDS=[{"key":"2026-10","bulan":"OKTOBER 2026","tema":"Performance-Driven Culture","file":"CulturePause_2026-10.html"},{"key":"2026-09","bulan":"SEPTEMBER 2026","tema":"Customer-Centric","file":"CulturePause_2026-09.html"}];
 (function(){
   const Q=(s,r=document)=>[...r.querySelectorAll(s)];
   /* urutan penyampaian sesuai alur panduan */
@@ -480,12 +505,36 @@ const DET={
   add('faq',[],DET.faq);
   add('pesan',[Q('.foot')[0]],DET.pesan);
 
-  /* tombol di header */
+  /* tombol di header + pemilih edisi bulanan */
+  const curBulan = (typeof D !== 'undefined' && D.bulan) ? D.bulan : '';
+  const edHtml = EDS.length ? `<div class="ed-wrap" id="edWrap">
+    <button class="btn ed" id="bEd" title="Pilih edisi bulan lain">
+      <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span>EDISI: ${curBulan}</span>
+      <svg viewBox="0 0 24 24" style="width:14px;height:14px"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <div class="ed-menu">
+      <div class="ed-hdr">Arsip Edisi Culture Pause</div>
+      ${EDS.map((e,idx)=>{
+        const isAct = e.bulan === curBulan;
+        return `<a class="ed-item${isAct?' act':''}" href="${e.file}">
+          <div><b>${e.bulan}</b><span>${e.tema}</span></div>
+          <span class="ed-badge">${isAct?'Aktif':(idx===0?'Terbaru':'Arsip')}</span>
+        </a>`;
+      }).join('')}
+    </div>
+  </div>` : '';
+
   const tools=document.createElement('div');tools.className='tools';
-  tools.innerHTML='<div class="row"><button class="btn sec" id="bFaq">FAQ LEADER</button><button class="btn pri" id="bGo">▶ MULAI BRIEFING</button></div><small>Klik bagian mana pun untuk melihat detail</small>';
+  tools.innerHTML=`<div class="row">${edHtml}<button class="btn sec" id="bFaq">FAQ LEADER</button><button class="btn pri" id="bGo">▶ MULAI BRIEFING</button></div><small>Klik bagian mana pun untuk melihat detail</small>`;
   Q('.hero')[0].appendChild(tools);
   Q('#bGo',tools)[0].onclick=()=>open(items[0].key);
   Q('#bFaq',tools)[0].onclick=()=>open('faq');
+  const edWrap = Q('#edWrap',tools)[0];
+  if(edWrap){
+    Q('#bEd',edWrap)[0].onclick=(ev)=>{ev.stopPropagation();edWrap.classList.toggle('open');};
+    document.addEventListener('click',()=>edWrap.classList.remove('open'));
+  }
 
   /* drawer */
   const ov=document.createElement('div');ov.id='ov';
